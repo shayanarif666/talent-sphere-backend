@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Database connection
-dbConnection().catch(console.dir);
+dbConnection();
 
 // Routes
 app.get("/", (req, res) => {
