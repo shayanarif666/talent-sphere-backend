@@ -1,0 +1,7 @@
+Learning Modules :
+
+1. More Learn About Indexing
+2. More depth in Normalization
+3. More depth in Relationships
+4. Learn About Status Codes
+5. Learn depth about HTTP Module
