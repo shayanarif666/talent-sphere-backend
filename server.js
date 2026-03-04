@@ -11,6 +11,20 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+/* CORS */
+const allowedOrigins = [
+  "http://localhost:5173/"
+];
+app.use(
+  cors({
+    origin: (origin, cb) =>
+      !origin || allowedOrigins.includes(origin)
+        ? cb(null, true)
+        : cb(new Error("Not allowed by CORS")),
+    credentials: true,
+  })
+);
+
 // Database connection
 dbConnection();
 
